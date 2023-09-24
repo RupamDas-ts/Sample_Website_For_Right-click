@@ -10,18 +10,18 @@ document.addEventListener("contextmenu", (event) => {
     customContextMenu.style.left = leftPosition + "px";
     customContextMenu.style.top = topPosition + "px";
 
-    customContextMenu.addEventListener("click", (e)=>{
-        e.preventDefault();
-        const targetId = e.target.id;
-        if(targetId === "op1" || targetId === "op2" || targetId === "op3"){
-            let selectedOption = e.target.textContent;
-            let newDiv = document.createElement("div");
-            newDiv.classList.add("new-div");
-            newDiv.textContent = selectedOption;
-            document.body.appendChild(newDiv);
-            customContextMenu.classList.remove("active");
-        }
-    });
+    // customContextMenu.addEventListener("click", (e)=>{
+    //     e.preventDefault();
+    //     const targetId = e.target.id;
+    //     if(targetId === "op1" || targetId === "op2" || targetId === "op3"){
+    //         let selectedOption = e.target.textContent;
+    //         let newDiv = document.createElement("div");
+    //         newDiv.classList.add("new-div");
+    //         newDiv.textContent = selectedOption;
+    //         document.body.appendChild(newDiv);
+    //         customContextMenu.classList.remove("active");
+    //     }
+    // });
 
     document.addEventListener("click", (e)=>{
         if (e.target !== customContextMenu) {
